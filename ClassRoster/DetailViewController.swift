@@ -12,12 +12,19 @@ class DetailViewController: UIViewController {
 
     @IBOutlet weak var firstNameLabel: UILabel!
     
+    var name = ""
+    
     
     @IBOutlet weak var lastNameLabel: UILabel!
+    
+    var last = ""
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        firstNameLabel.text = name
+        lastNameLabel.text = last
 
         // Do any additional setup after loading the view.
     }

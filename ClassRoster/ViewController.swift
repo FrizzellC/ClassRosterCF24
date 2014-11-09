@@ -13,7 +13,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet weak var tableView: UITableView!
     
     var people = [Person]()
-    
+    var personClickedFirst = ""
+    var personClickedLast = ""
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Home"
@@ -50,13 +52,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        //if this cell is clicked, store it here (create a place to store)
+        personClickedFirst = self.people[indexPath.row].firstName
+        personClickedLast = self.people[indexPath.row].lastName
         
-        performSegueWithIdentifier("SeguePersonDetail", sender: self)
         
-        
-        
-        //if this button is pressed, store it here (create a place to store)
         //use perforseguewithidentifier to send to dvc
+        performSegueWithIdentifier("SeguePersonDetail", sender: self)
     }
     
     
@@ -64,12 +66,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "SeguePersonDetail" {
             let detailViewController = segue.destinationViewController as DetailViewController
+            
+            detailViewController.name = personClickedFirst
+            detailViewController.last = personClickedLast
         }
     }
-    
-    
-    
-
 }
 
 
