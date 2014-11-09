@@ -21,6 +21,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         var person1 = Person(first: "Chantel", last: "Frizzell", student: true)
         var person2 = Person(first: "Brad", last: "Johnson", student: false)
         var person3 = Person(first: "Daniel", last: "Hour", student: true)
+        
+        people.append(person1)
+        people.append(person2)
+        people.append(person3)
 
         
         
