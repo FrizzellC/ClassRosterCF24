@@ -10,5 +10,9 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
+    @IBOutlet weak var Name: UILabel!
+    
+    @IBOutlet weak var lastName: UILabel!
+    
 
 }
