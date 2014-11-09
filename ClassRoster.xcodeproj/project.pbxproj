@@ -13,6 +13,8 @@
 		132CF9651A08814D008707CA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 132CF9641A08814D008707CA /* Images.xcassets */; };
 		132CF9681A08814D008707CA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 132CF9661A08814D008707CA /* LaunchScreen.xib */; };
 		132CF9741A08814D008707CA /* ClassRosterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132CF9731A08814D008707CA /* ClassRosterTests.swift */; };
+		132CF97F1A089060008707CA /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132CF97E1A089060008707CA /* Person.swift */; };
+		13D4DA141A0F290F00F5D484 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D4DA131A0F290F00F5D484 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		132CF96D1A08814D008707CA /* ClassRosterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClassRosterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		132CF9721A08814D008707CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		132CF9731A08814D008707CA /* ClassRosterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassRosterTests.swift; sourceTree = "<group>"; };
+		132CF97E1A089060008707CA /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		13D4DA131A0F290F00F5D484 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,11 +81,9 @@
 		132CF95A1A08814D008707CA /* ClassRoster */ = {
 			isa = PBXGroup;
 			children = (
-				132CF95D1A08814D008707CA /* AppDelegate.swift */,
-				132CF95F1A08814D008707CA /* ViewController.swift */,
-				132CF9611A08814D008707CA /* Main.storyboard */,
-				132CF9641A08814D008707CA /* Images.xcassets */,
-				132CF9661A08814D008707CA /* LaunchScreen.xib */,
+				1390BB741A0B0E80008D3251 /* Model Layer */,
+				1390BB761A0B1136008D3251 /* View Layer */,
+				1390BB751A0B0E89008D3251 /* Controller Layer */,
 				132CF95B1A08814D008707CA /* Supporting Files */,
 			);
 			path = ClassRoster;
@@ -110,6 +112,34 @@
 				132CF9721A08814D008707CA /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1390BB741A0B0E80008D3251 /* Model Layer */ = {
+			isa = PBXGroup;
+			children = (
+				132CF95D1A08814D008707CA /* AppDelegate.swift */,
+				132CF97E1A089060008707CA /* Person.swift */,
+			);
+			name = "Model Layer";
+			sourceTree = "<group>";
+		};
+		1390BB751A0B0E89008D3251 /* Controller Layer */ = {
+			isa = PBXGroup;
+			children = (
+				132CF95F1A08814D008707CA /* ViewController.swift */,
+				13D4DA131A0F290F00F5D484 /* DetailViewController.swift */,
+			);
+			name = "Controller Layer";
+			sourceTree = "<group>";
+		};
+		1390BB761A0B1136008D3251 /* View Layer */ = {
+			isa = PBXGroup;
+			children = (
+				132CF9661A08814D008707CA /* LaunchScreen.xib */,
+				132CF9641A08814D008707CA /* Images.xcassets */,
+				132CF9611A08814D008707CA /* Main.storyboard */,
+			);
+			name = "View Layer";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,8 +242,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				132CF97F1A089060008707CA /* Person.swift in Sources */,
 				132CF9601A08814D008707CA /* ViewController.swift in Sources */,
 				132CF95E1A08814D008707CA /* AppDelegate.swift in Sources */,
+				13D4DA141A0F290F00F5D484 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +437,7 @@
 				132CF9791A08814D008707CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		132CF97A1A08814D008707CA /* Build configuration list for PBXNativeTarget "ClassRosterTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +446,7 @@
 				132CF97C1A08814D008707CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
