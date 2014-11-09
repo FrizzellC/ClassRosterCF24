@@ -14,7 +14,7 @@
 		132CF9681A08814D008707CA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 132CF9661A08814D008707CA /* LaunchScreen.xib */; };
 		132CF9741A08814D008707CA /* ClassRosterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132CF9731A08814D008707CA /* ClassRosterTests.swift */; };
 		132CF97F1A089060008707CA /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132CF97E1A089060008707CA /* Person.swift */; };
-		13D4DA141A0F290F00F5D484 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D4DA131A0F290F00F5D484 /* DetailViewController.swift */; };
+		13D4DA4B1A101A7B00F5D484 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D4DA4A1A101A7B00F5D484 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +39,7 @@
 		132CF9721A08814D008707CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		132CF9731A08814D008707CA /* ClassRosterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassRosterTests.swift; sourceTree = "<group>"; };
 		132CF97E1A089060008707CA /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
-		13D4DA131A0F290F00F5D484 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		13D4DA4A1A101A7B00F5D484 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,7 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				132CF95F1A08814D008707CA /* ViewController.swift */,
-				13D4DA131A0F290F00F5D484 /* DetailViewController.swift */,
+				13D4DA4A1A101A7B00F5D484 /* DetailViewController.swift */,
 			);
 			name = "Controller Layer";
 			sourceTree = "<group>";
@@ -245,7 +245,7 @@
 				132CF97F1A089060008707CA /* Person.swift in Sources */,
 				132CF9601A08814D008707CA /* ViewController.swift in Sources */,
 				132CF95E1A08814D008707CA /* AppDelegate.swift in Sources */,
-				13D4DA141A0F290F00F5D484 /* DetailViewController.swift in Sources */,
+				13D4DA4B1A101A7B00F5D484 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -49,14 +49,24 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return cell
     }
     
-//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        if segue.identifier == "SeguePersonDetail" {
-//            let detailViewController = segue.destinationViewController as DetailViewController
-//            let selectedIndexpath = self.tableView.indexPathForSelectedRow()
-//            var personToPass = self.people[selectedIndexpath!.row]
-//            detailViewController
-//        }
-//    }
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        performSegueWithIdentifier("SeguePersonDetail", sender: self)
+        
+        
+        
+        //if this button is pressed, store it here (create a place to store)
+        //use perforseguewithidentifier to send to dvc
+    }
+    
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "SeguePersonDetail" {
+            let detailViewController = segue.destinationViewController as DetailViewController
+        }
+    }
+    
     
     
 

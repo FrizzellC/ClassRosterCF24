@@ -2,17 +2,40 @@
 //  DetailViewController.swift
 //  ClassRoster
 //
-//  Created by chantel Frizzell on 11/8/14.
+//  Created by chantel Frizzell on 11/9/14.
 //  Copyright (c) 2014 NOidea. All rights reserved.
 //
 
 import UIKit
 
 class DetailViewController: UIViewController {
+
+    @IBOutlet weak var firstNameLabel: UILabel!
     
-    @IBOutlet weak var Name: UILabel!
     
-    @IBOutlet weak var lastName: UILabel!
+    @IBOutlet weak var lastNameLabel: UILabel!
     
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+    }
+    */
 
 }
