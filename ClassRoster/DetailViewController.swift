@@ -8,14 +8,14 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController, UITextFieldDelegate {
 
-    @IBOutlet weak var firstNameLabel: UILabel!
+    @IBOutlet weak var firstName: UITextField!
     
     var name = ""
     
     
-    @IBOutlet weak var lastNameLabel: UILabel!
+    @IBOutlet weak var lastName: UITextField!
     
     var last = ""
     
@@ -23,10 +23,15 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        firstNameLabel.text = name
-        lastNameLabel.text = last
+//        firstName.text = name
+//        lastName.text = last
 
         // Do any additional setup after loading the view.
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 
     override func didReceiveMemoryWarning() {

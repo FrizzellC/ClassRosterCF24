@@ -61,24 +61,57 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="First Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ts0-8R-erT">
-                                <rect key="frame" x="16" y="116" width="109" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L1n-VF-Rps">
+                                <rect key="frame" x="176" y="84" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="AaO-OO-wWK"/>
+                                    <constraint firstAttribute="height" constant="30" id="llZ-oo-nM9"/>
+                                </constraints>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1Uw-GF-umz">
+                                <rect key="frame" x="36" y="84" width="120" height="128"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="HYS-wO-6Q6"/>
+                                    <constraint firstAttribute="height" constant="128" id="ZA0-xg-GpN"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RmY-sC-SkF">
+                                <rect key="frame" x="176" y="127" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="dGM-Lr-1La"/>
+                                    <constraint firstAttribute="width" constant="100" id="khP-g2-HVb"/>
+                                </constraints>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Last Name " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K7Q-zl-Mtd">
-                                <rect key="frame" x="16" y="256" width="109" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="L1n-VF-Rps" firstAttribute="top" secondItem="icY-t9-Ukd" secondAttribute="bottom" constant="20" id="2DU-UN-S17"/>
+                            <constraint firstItem="L1n-VF-Rps" firstAttribute="leading" secondItem="1Uw-GF-umz" secondAttribute="trailing" constant="25" id="5dw-LA-o5S"/>
+                            <constraint firstItem="RmY-sC-SkF" firstAttribute="leading" secondItem="1Uw-GF-umz" secondAttribute="trailing" constant="20" id="CQJ-SL-sW4"/>
+                            <constraint firstItem="1Uw-GF-umz" firstAttribute="leading" secondItem="lct-6r-gFR" secondAttribute="leadingMargin" constant="20" id="DJz-94-qDU"/>
+                            <constraint firstItem="RmY-sC-SkF" firstAttribute="leading" secondItem="1Uw-GF-umz" secondAttribute="trailing" constant="20" id="JwJ-f1-gJ6"/>
+                            <constraint firstItem="RmY-sC-SkF" firstAttribute="top" secondItem="L1n-VF-Rps" secondAttribute="bottom" constant="13" id="PhK-iL-kxj"/>
+                            <constraint firstItem="1Uw-GF-umz" firstAttribute="top" secondItem="icY-t9-Ukd" secondAttribute="bottom" constant="20" id="a6l-bb-ULM"/>
+                            <constraint firstItem="RmY-sC-SkF" firstAttribute="leading" secondItem="L1n-VF-Rps" secondAttribute="leading" id="bbA-9s-Fo1"/>
+                            <constraint firstItem="RmY-sC-SkF" firstAttribute="top" secondItem="L1n-VF-Rps" secondAttribute="bottom" constant="13" id="hWF-IW-WFS"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="5dw-LA-o5S"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
-                        <outlet property="firstNameLabel" destination="Ts0-8R-erT" id="7L2-BX-lrx"/>
-                        <outlet property="lastNameLabel" destination="K7Q-zl-Mtd" id="2J1-k9-OYN"/>
+                        <outlet property="firstName" destination="L1n-VF-Rps" id="iaM-hJ-Bir"/>
+                        <outlet property="lastName" destination="RmY-sC-SkF" id="aA6-0h-1r3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u7N-HT-8o6" userLabel="First Responder" sceneMemberID="firstResponder"/>

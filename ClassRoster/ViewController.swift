@@ -28,8 +28,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         people.append(person2)
         people.append(person3)
 
-        
-        
         self.tableView.dataSource = self
         self.tableView.delegate = self
         
@@ -60,8 +58,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         //use perforseguewithidentifier to send to dvc
         performSegueWithIdentifier("SeguePersonDetail", sender: self)
     }
-    
-    
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "SeguePersonDetail" {
