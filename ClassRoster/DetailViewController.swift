@@ -8,15 +8,17 @@
 
 import UIKit
 
-class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, NSCoding {
+class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var imageView: UIImageView!
     
     @IBOutlet weak var firstName: UITextField!
-    var name = ""
     
     @IBOutlet weak var lastName: UITextField!
+    
+    var name = ""
     var last = ""
+    var imagePickerController = UIImagePickerController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,14 +27,14 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePicker
         // Do any additional setup after loading the view.
     }
     
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
+    func textFieldFirstShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func textFieldLastShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
     @IBAction func updateImageClicked(sender: AnyObject) {
@@ -45,12 +47,17 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePicker
         }
     }
     
-    func imagePickerController(picker: UIImagePickerController!, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
-        let image = editingInfo[UIImagePickerControllerEditedImage] as UIImage
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingImageWithInfo info: [NSObject : AnyObject]) {
+        let image = info[UIImagePickerControllerEditedImage] as UIImage
         self.imageView.image = image
         
         self.dismissViewControllerAnimated(true, completion: nil)
         self.imageView.image = image
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
 
     /*
