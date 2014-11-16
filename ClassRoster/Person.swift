@@ -7,12 +7,15 @@
 //
 
 import Foundation
+import UIKit
 
 class Person {
     
     var firstName = ""
     var lastName = ""
     var isStudent = true
+    var image : UIImage?
+    
     
     init(first : String, last : String, student : Bool) {
         self.firstName = first
