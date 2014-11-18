@@ -22,20 +22,18 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePicker
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        //self.imageView = selectedPerson.image
         self.firstName.delegate = self
+        self.lastName.delegate = self
 
         // Do any additional setup after loading the view.
     }
     
-    func textFieldFirstShouldReturn(textField: UITextField) -> Bool {
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }
-    
-    func textFieldLastShouldReturn(textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
-    }
+   
     
     @IBAction func updateImageClicked(sender: AnyObject) {
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) {
