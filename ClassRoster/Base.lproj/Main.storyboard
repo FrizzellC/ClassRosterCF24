@@ -17,19 +17,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="pqa-g2-uaw">
-                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="pqa-g2-uaw" customClass="TableViewCell">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PERSON_CELL" rowHeight="80" id="Wwk-xU-dRJ">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PERSON_CELL" rowHeight="80" id="Wwk-xU-dRJ" customClass="TableViewCell">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Wwk-xU-dRJ" id="pEc-WH-UOR">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ymO-w9-aC0">
-                                                    <rect key="frame" x="89" y="7" width="41" height="22"/>
-                                                    <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Person" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ymO-w9-aC0" customClass="TableViewCell">
+                                                    <rect key="frame" x="89" y="7" width="76.5" height="22"/>
+                                                    <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -39,12 +39,12 @@
                                                         <constraint firstAttribute="width" constant="65" id="byN-Qe-xPd"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Teacher" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p7c-9q-mNJ">
-                                                    <rect key="frame" x="89" y="29" width="35" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p7c-9q-mNJ">
+                                                    <rect key="frame" x="89" y="29" width="27" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="wrN-aR-Ze8"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="11"/>
+                                                    <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="11"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -67,6 +67,10 @@
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="firstNameInCell" destination="ymO-w9-aC0" id="fZK-Ad-2aG"/>
+                                            <outlet property="lastNameInCell" destination="p7c-9q-mNJ" id="LbY-ib-Zq7"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -75,8 +79,8 @@
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="pqa-g2-uaw" secondAttribute="trailing" constant="-16" id="Vbm-yf-HCI"/>
                             <constraint firstItem="pqa-g2-uaw" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="dtf-h7-vJJ"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="pqa-g2-uaw" secondAttribute="bottom" id="ld2-XJ-Z0c"/>
-                            <constraint firstItem="pqa-g2-uaw" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="zkx-lI-7h9"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="pqa-g2-uaw" secondAttribute="bottom" constant="64" id="ld2-XJ-Z0c"/>
+                            <constraint firstItem="pqa-g2-uaw" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="-64" id="zkx-lI-7h9"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="pAV-2y-v8c"/>
@@ -139,7 +143,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="updateImageClicked:" destination="zkD-rX-aeq" eventType="touchUpInside" id="AIk-i4-d6o"/>
+                                    <action selector="UpdateImageButton:" destination="zkD-rX-aeq" eventType="touchUpInside" id="MpK-ZC-VOb"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -168,9 +172,9 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="firstName" destination="L1n-VF-Rps" id="iaM-hJ-Bir"/>
+                        <outlet property="firstName" destination="L1n-VF-Rps" id="Uec-Sl-B6J"/>
                         <outlet property="imageView" destination="1Uw-GF-umz" id="7cH-pa-uMh"/>
-                        <outlet property="lastName" destination="RmY-sC-SkF" id="aA6-0h-1r3"/>
+                        <outlet property="lastName" destination="RmY-sC-SkF" id="iiu-lP-iho"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u7N-HT-8o6" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -197,6 +201,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="cameraImage" width="318" height="211"/>
+        <image name="cameraImage" width="159" height="105"/>
     </resources>
 </document>

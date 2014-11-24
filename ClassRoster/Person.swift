@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class Person {
+class Person :  NSObject, NSCoding {
     
     var firstName = ""
     var lastName = ""
@@ -23,10 +23,32 @@ class Person {
         self.isStudent = true
     }
     
-    func fullName() -> String {
-        return "\(firstName) \(lastName)"
-        
+    required init(coder aDecoder: NSCoder) {
+        self.firstName = aDecoder.decodeObjectForKey("firstName") as String
+        self.lastName = aDecoder.decodeObjectForKey("lastName") as String
+        self.isStudent = aDecoder.decodeObjectForKey("isStudent") as Bool
+        if let decodedImage = aDecoder.decodeObjectForKey("image") as? UIImage {
+            self.image = decodedImage
+        }
     }
+    
+    func encodeWithCoder(aCoder: NSCoder) {
+        aCoder.encodeObject(self.firstName, forKey: "firstName")
+        aCoder.encodeObject(self.lastName, forKey: "lastName")
+        aCoder.encodeObject(self.isStudent, forKey: "isStudent")
+        if self.image != nil {
+            aCoder.encodeObject(self.image!, forKey: "image")
+        } else {
+            aCoder.encodeObject(nil, forKey: "image")
+        }
+    }
+    
+//    func fullName() -> String {
+//        return "\(firstName) \(lastName)"
+//        
+//    }
+    
+    
 }
 
 

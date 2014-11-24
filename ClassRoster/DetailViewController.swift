@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import CoreData
 
 class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -22,7 +21,11 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePicker
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //self.imageView = selectedPerson.image
+        self.firstName.text = selectedPerson.firstName
+        self.lastName.text = selectedPerson.lastName
+        if self.selectedPerson.image != nil {
+            self.imageView.image = selectedPerson.image
+        }
         self.firstName.delegate = self
         self.lastName.delegate = self
 
@@ -34,7 +37,11 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePicker
         textField.resignFirstResponder()
         return true
     }
-   
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+    }
+
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
         let image = info[UIImagePickerControllerEditedImage] as UIImage
         self.selectedPerson.image = image
@@ -43,24 +50,16 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePicker
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
-    @IBAction func updateImageClicked(sender: AnyObject) {
-        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) {
+    @IBAction func UpdateImageButton(sender: AnyObject) {
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.PhotoLibrary) {
             var imagePickerController = UIImagePickerController()
-            self.imagePickerController.sourceType = UIImagePickerControllerSourceType.Camera
+            self.imagePickerController.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
             self.imagePickerController.delegate = self
             self.imagePickerController.allowsEditing = true
             self.presentViewController(self.imagePickerController, animated: true, completion: nil)
         }
     }
     
-//    func imagePickerController(picker: UIImagePickerController, didFinishPickingImageWithInfo info: [NSObject : AnyObject]) {
-//        let image = info[UIImagePickerControllerEditedImage] as UIImage
-//        self.imageView.image = image
-//        
-//        self.dismissViewControllerAnimated(true, completion: nil)
-//        self.selectedPerson.image = image
-//    }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

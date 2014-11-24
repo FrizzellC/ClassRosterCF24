@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		130A54AC1A1D921A0073651E /* Plist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 130A54AB1A1D921A0073651E /* Plist.plist */; };
+		130A54B21A1D960D0073651E /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 130A54B11A1D960D0073651E /* TableViewCell.swift */; };
 		132CF95E1A08814D008707CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132CF95D1A08814D008707CA /* AppDelegate.swift */; };
 		132CF9601A08814D008707CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132CF95F1A08814D008707CA /* ViewController.swift */; };
 		132CF9631A08814D008707CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 132CF9611A08814D008707CA /* Main.storyboard */; };
@@ -28,6 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		130A54AB1A1D921A0073651E /* Plist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Plist.plist; sourceTree = "<group>"; };
+		130A54B11A1D960D0073651E /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		132CF9581A08814D008707CA /* ClassRoster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClassRoster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		132CF95C1A08814D008707CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		132CF95D1A08814D008707CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				132CF95C1A08814D008707CA /* Info.plist */,
+				130A54AB1A1D921A0073651E /* Plist.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -138,6 +143,7 @@
 				132CF9661A08814D008707CA /* LaunchScreen.xib */,
 				132CF9641A08814D008707CA /* Images.xcassets */,
 				132CF9611A08814D008707CA /* Main.storyboard */,
+				130A54B11A1D960D0073651E /* TableViewCell.swift */,
 			);
 			name = "View Layer";
 			sourceTree = "<group>";
@@ -223,6 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				132CF9631A08814D008707CA /* Main.storyboard in Resources */,
+				130A54AC1A1D921A0073651E /* Plist.plist in Resources */,
 				132CF9681A08814D008707CA /* LaunchScreen.xib in Resources */,
 				132CF9651A08814D008707CA /* Images.xcassets in Resources */,
 			);
@@ -242,6 +249,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				130A54B21A1D960D0073651E /* TableViewCell.swift in Sources */,
 				132CF97F1A089060008707CA /* Person.swift in Sources */,
 				132CF9601A08814D008707CA /* ViewController.swift in Sources */,
 				132CF95E1A08814D008707CA /* AppDelegate.swift in Sources */,
